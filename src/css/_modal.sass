@@ -1,0 +1,74 @@
+@import 'variables'
+
+    
+.modal
+    position: fixed
+    display: none
+    align-items: center
+    justify-content: center
+    width: 100%
+    height: 100%
+    top: 0px
+    z-index: 3
+    background-color: rgba(61, 61, 61, 0.7)
+    .popup
+        position: fixed
+        width: 70%
+        text-align: center
+        .close
+            z-index: 10
+            position: absolute
+            font-size: 35px
+            top: -35px
+            right: -20px
+            color: white
+            font-weight: 100
+            cursor: pointer
+        .header
+            display: block
+            background-color: $active-color
+            padding: 4%  0
+            font-size: 21px
+            font-weight: 300
+            color: white
+            text-transform: uppercase
+        .content
+            padding: 3%
+            background: url("../img/modal/background.png") center
+            background-size: auto
+            color: white
+            &-title
+                font-size: 30px
+                font-weight: 600
+                &__small
+                    font-size: 24px
+            &-phone
+                margin: 2% 0
+                font-size: 20px
+                line-height: 27px
+                font-weight: 100
+            &-request
+                display: flex
+                padding: 1% 10%
+                display: flex
+                gap: 2%
+                justify-content: space-between
+                .input_text
+                    font-size: 14px
+                    border: none
+                    padding: 4% 2%
+                    border-radius: 5px
+                    width: 70%
+                .button
+                    font-size: 14px
+                    color: $text-color-light
+                    border: none
+                    border-radius: 5px
+                    background-color: $active-color
+                    padding: 4% 2%
+                    width: 30%
+                    &:hover
+                        background-color: lighten($active-color, 5)
+                        cursor: pointer
+            &-remark
+                font-size: 16px

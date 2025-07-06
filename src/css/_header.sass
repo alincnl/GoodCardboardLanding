@@ -1,0 +1,29 @@
+@import 'variables'
+
+.header
+    &-contacts
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        margin: 3% 0 3% 0
+        &__phone
+            font-size: 22px
+            margin-right: 13px
+            &:first-child
+                border-right: 1px solid #cfcfd0
+                padding-right: 2%
+
+        &__button
+            font-size: 14px
+            color: $text-color-light
+            border: none
+            background-color: $active-color
+            padding: 13px 22px
+            border-radius: 5px
+            &:hover
+                background-color: lighten($active-color, 5)
+                cursor: pointer
+            img
+                vertical-align: middle
+
+

@@ -1,0 +1,413 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Black.ttf");
+  font-weight: 900;
+  font-style: normal;
+}
+body {
+  background-color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+.header-contacts {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 3% 0 3% 0;
+}
+.header-contacts__phone {
+  font-size: 22px;
+  margin-right: 13px;
+}
+.header-contacts__phone:first-child {
+  border-right: 1px solid #cfcfd0;
+  padding-right: 2%;
+}
+.header-contacts__button {
+  font-size: 14px;
+  color: #ffffff;
+  border: none;
+  background-color: #fd9c28;
+  padding: 13px 22px;
+  border-radius: 5px;
+}
+.header-contacts__button:hover {
+  background-color: #fda841;
+  cursor: pointer;
+}
+.header-contacts__button img {
+  vertical-align: middle;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3%;
+  position: relative;
+  color: #ffffff;
+  background: #373737 url("../img/main-background.jpg") center;
+  background-size: cover;
+  padding: 5% 10%;
+  z-index: 1;
+}
+.main-content::before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+.main-content__images {
+  position: relative;
+  width: 45%;
+}
+.main-content__images::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 85%;
+  height: 100%;
+  margin-left: 15%;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+}
+.main-content__images::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  background: url("../img/rt-logo.png") center no-repeat;
+  background-size: contain;
+  left: 20%;
+  top: 88%;
+  width: 15%;
+  height: 15%;
+}
+.main-content__text {
+  position: relative;
+  align-self: flex-start;
+}
+.main-content__title {
+  font-size: 41px;
+  margin-bottom: 2%;
+  font-weight: 700;
+  line-height: 100%;
+}
+.main-content__delivery {
+  font-size: 28px;
+  margin-bottom: 3%;
+  font-weight: 300;
+  line-height: 100%;
+}
+.main-content .request {
+  background: rgba(188, 188, 188, 0.4);
+  padding: 5% 5%;
+  font-weight: 300;
+}
+.main-content .request .bold {
+  font-weight: 700;
+}
+.main-content .request-title {
+  font-size: 20px;
+  margin-bottom: 1%;
+  line-height: 150%;
+}
+.main-content .request-remark {
+  font-size: 14px;
+  padding-top: 1%;
+  padding-left: 3%;
+}
+.main-content .request .input_text {
+  font-size: 14px;
+  border: none;
+  padding: 4% 2%;
+  border-radius: 5px;
+  width: 70%;
+}
+.main-content .request .button {
+  font-size: 14px;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  background-color: #fd9c28;
+  padding: 4% 2%;
+  width: 30%;
+}
+.main-content .request .button:hover {
+  background-color: #fda841;
+  cursor: pointer;
+}
+.main-content .request .form {
+  padding: 2% 0 1% 0;
+  display: flex;
+  gap: 2%;
+  justify-content: space-between;
+}
+
+@keyframes move {
+  from {
+    opacity: 0;
+    margin-bottom: -100px;
+    transform: rotate(-90deg);
+  }
+  to {
+    opacity: 1;
+    margin-bottom: 0;
+  }
+}
+.animate {
+  animation-name: move;
+  animation-duration: 1s;
+  animation-delay: 0.4s;
+}
+
+.experience-advantages {
+  background-color: #f4f4f4;
+  padding-bottom: 5%;
+}
+.experience-advantages .experience {
+  text-align: center;
+  padding: 5% 4%;
+}
+.experience-advantages .experience__duration {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+}
+.experience-advantages .experience__volume {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+}
+.experience-advantages .experience__square {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+}
+.experience-advantages .experience h2 {
+  font-size: 36px;
+  font-weight: 500;
+  color: #fd9c28;
+  font-weight: 300;
+  padding-bottom: 3%;
+}
+.experience-advantages .experience p {
+  font-weight: 300;
+  font-size: 16px;
+}
+.experience-advantages .experience sup {
+  font-size: 16px;
+}
+.experience-advantages .advantages {
+  display: flex;
+  gap: 3%;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  margin: 0 10%;
+}
+.experience-advantages .advantages .advantage {
+  display: flex;
+  gap: 3%;
+  height: auto;
+  flex-basis: 30%;
+  align-items: center;
+  background-color: #fff;
+  margin: 1% 0;
+  padding: 2%;
+}
+.experience-advantages .advantages .advantage h3 {
+  font-size: 15px;
+  font-weight: 800;
+  padding-bottom: 2%;
+}
+.experience-advantages .advantages .advantage p {
+  font-size: 14px;
+  font-weight: 300;
+}
+.experience-advantages .advantages .advantage .adv-img {
+  width: 30%;
+}
+.experience-advantages .advantages .advantage .adv-text {
+  width: 70%;
+}
+
+.products {
+  text-align: center;
+}
+.products h2 {
+  position: relative;
+  font-size: 27px;
+  font-weight: 900;
+  margin: 5% 0;
+}
+.products h2::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  background: url("../img/wavy.png") center no-repeat;
+  background-size: contain;
+  left: 20%;
+  top: 110%;
+  width: 60%;
+  height: 20%;
+}
+.products-title {
+  font-weight: 500;
+  font-size: 22px;
+  margin: 3% 0;
+}
+.products-image {
+  height: 65%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.products .row {
+  margin-bottom: 5%;
+}
+.products .buttons {
+  margin: 5% 0;
+}
+.products .buttons-readmore {
+  margin-right: 3%;
+  padding: 4% 5%;
+  min-width: 30%;
+  text-align: center;
+  font-size: 15px;
+  color: #9b9b9b;
+  border: solid #9b9b9b 2px;
+  border-radius: 3px;
+  background-color: white;
+}
+.products .buttons-readmore:hover {
+  border: solid #fd9c28 2px;
+  color: #fd9c28;
+  cursor: pointer;
+}
+.products .buttons-price {
+  min-width: 40%;
+  text-align: center;
+  padding: 4% 5%;
+  font-size: 15px;
+  color: #ffffff;
+  border: solid #fd9c28 2px;
+  border-radius: 3px;
+  background-color: #fd9c28;
+}
+.products .buttons-price:hover {
+  background-color: #fda841;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  z-index: 3;
+  background-color: rgba(61, 61, 61, 0.7);
+}
+.modal .popup {
+  position: fixed;
+  width: 70%;
+  text-align: center;
+}
+.modal .popup .close {
+  z-index: 10;
+  position: absolute;
+  font-size: 35px;
+  top: -35px;
+  right: -20px;
+  color: white;
+  font-weight: 100;
+  cursor: pointer;
+}
+.modal .popup .header {
+  display: block;
+  background-color: #fd9c28;
+  padding: 4% 0;
+  font-size: 21px;
+  font-weight: 300;
+  color: white;
+  text-transform: uppercase;
+}
+.modal .popup .content {
+  padding: 3%;
+  background: url("../img/modal/background.png") center;
+  background-size: auto;
+  color: white;
+}
+.modal .popup .content-title {
+  font-size: 30px;
+  font-weight: 600;
+}
+.modal .popup .content-title__small {
+  font-size: 24px;
+}
+.modal .popup .content-phone {
+  margin: 2% 0;
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 100;
+}
+.modal .popup .content-request {
+  display: flex;
+  padding: 1% 10%;
+  display: flex;
+  gap: 2%;
+  justify-content: space-between;
+}
+.modal .popup .content-request .input_text {
+  font-size: 14px;
+  border: none;
+  padding: 4% 2%;
+  border-radius: 5px;
+  width: 70%;
+}
+.modal .popup .content-request .button {
+  font-size: 14px;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  background-color: #fd9c28;
+  padding: 4% 2%;
+  width: 30%;
+}
+.modal .popup .content-request .button:hover {
+  background-color: #fda841;
+  cursor: pointer;
+}
+.modal .popup .content-remark {
+  font-size: 16px;
+}/*# sourceMappingURL=style.css.map */
